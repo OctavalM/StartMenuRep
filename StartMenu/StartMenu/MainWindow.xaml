@@ -14,73 +14,61 @@
 
 	<Grid Background="#26373D">
 		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="45" />
-			<ColumnDefinition Width="290" />
-			<ColumnDefinition Width="303" />
+			<ColumnDefinition Width="45"/>
+			<ColumnDefinition Width="290"/>
+			<ColumnDefinition Width="303"/>
 		</Grid.ColumnDefinitions>
 
-		<Button VerticalAlignment="Top" Style="{StaticResource MenuBarStyle}">
-			<Image
-				Width="18"
-				RenderOptions.BitmapScalingMode="Fant"
-				Source="/Images/menu.png" />
+		<Button VerticalAlignment="Top" 
+		        Style="{StaticResource MenuBarStyle}">
+			<Image Height="18"
+			       Width="18"
+				   RenderOptions.BitmapScalingMode="Fant"
+				   Source="/Images/menu.png"/>
 		</Button>
 
 		<DockPanel VerticalAlignment="Bottom">
-			<Button
-				Height="40"
-				DockPanel.Dock="Bottom"
+			<Button DockPanel.Dock="Bottom"  
 				Style="{StaticResource MenuBarStyle}">
-				<Image
-					Width="18"
-					RenderOptions.BitmapScalingMode="Fant"
-					Source="/Images/power.png" />
+				<Image Height="18"
+					   RenderOptions.BitmapScalingMode="Fant"
+					   Source="/Images/power.png"/>
 			</Button>
 
-			<Button
-				Height="40"
-				DockPanel.Dock="Bottom"
-				Style="{StaticResource MenuBarStyle}">
-				<Image
-					Width="18"
-					RenderOptions.BitmapScalingMode="Fant"
-					Source="/Images/settings.png" />
+			<Button DockPanel.Dock="Bottom"
+				    Style="{StaticResource MenuBarStyle}">
+				<Image Height="18"
+					   RenderOptions.BitmapScalingMode="Fant"
+					   Source="/Images/settings.png"/>
 			</Button>
 
-			<Button
-				Height="40"
+			<Button 
 				DockPanel.Dock="Bottom"
 				Style="{StaticResource MenuBarStyle}">
-				<Image
-					Width="18"
-					RenderOptions.BitmapScalingMode="Fant"
-					Source="/Images/image.png" />
+				<Image Height="18"
+					   RenderOptions.BitmapScalingMode="Fant"
+					   Source="/Images/image.png"/>
 			</Button>
 
-			<Button
-				Height="40"
+			<Button 
 				DockPanel.Dock="Bottom"
 				Style="{StaticResource MenuBarStyle}">
-				<Image
-					Width="18"
-					RenderOptions.BitmapScalingMode="Fant"
-					Source="/Images/file.png" />
+				<Image Height="18"
+					   RenderOptions.BitmapScalingMode="Fant"
+					   Source="/Images/file.png"/>
 			</Button>
 
-			<Button
-				Height="40"
+			<Button 
 				DockPanel.Dock="Bottom"
 				Style="{StaticResource MenuBarStyle}">
-				<Image
-					Width="18"
-					RenderOptions.BitmapScalingMode="Fant"
-					Source="/Images/user.png" />
+				<Image Height="18"  
+					   RenderOptions.BitmapScalingMode="Fant"
+					   Source="/Images/user.png"/>
 			</Button>
 		</DockPanel>
 
-		<ListView
-			Grid.Column="1"
-			Background="#26373D"
-			BorderBrush="#26373D" />
+		<ListView Grid.Column="1"
+			      Background="#26373D"
+			      BorderBrush="#26373D"/>
 	</Grid>
 </Window>
