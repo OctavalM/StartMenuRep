@@ -23,6 +23,14 @@ namespace StartMenu
 		public MainWindow()
 		{
 			InitializeComponent();
+			AppsLV.ItemsSource = Models.ApplicationItem.GetApps();
+
+			CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(AppsLV.ItemsSource);
+			PropertyGroupDescription groupDescription = new PropertyGroupDescription("FirstLetter");
+			view.GroupDescriptions.Add(groupDescription);
+
+
+
 		}
 	}
 }

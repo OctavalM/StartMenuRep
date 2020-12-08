@@ -69,6 +69,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\ApplicationItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -111,6 +112,33 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\access.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\adobeIllustrator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\discord.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\powerpoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\visio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\visualStudio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\word.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\zoom.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
