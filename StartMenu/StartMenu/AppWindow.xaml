@@ -1,0 +1,40 @@
+﻿<Window x:Class="StartMenu.AppWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StartMenu"
+        mc:Ignorable="d"
+        Title="AppWindow"  
+        Height="430" 
+        Width="651"
+		WindowStartupLocation="CenterScreen">
+
+	<Grid Background="#26373D">
+		<Grid.RowDefinitions>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
+
+		<StackPanel Orientation="Horizontal" 
+		            HorizontalAlignment="Center"  
+		            VerticalAlignment="Center"
+		            Grid.Row="1">
+			<Border Background="{Binding Color}"
+					Height="60"
+					Width="60">
+				<Image Source="{Binding Image}"
+					   Height="45"
+					   Width="45"
+					   RenderOptions.BitmapScalingMode="Fant"/>
+			</Border>
+
+			<TextBlock Text="{Binding AppName}"
+					   Margin="10,0,0,0" 
+					   FontSize="20"
+					   VerticalAlignment="Center"
+					   Foreground="White"/>
+		</StackPanel>
+	</Grid>
+</Window>

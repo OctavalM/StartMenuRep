@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StartMenu.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,10 +28,21 @@ namespace StartMenu
 
 			CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(AppsLV.ItemsSource);
 			PropertyGroupDescription groupDescription = new PropertyGroupDescription("FirstLetter");
-			view.GroupDescriptions.Add(groupDescription);
+			view.GroupDescriptions.Add(groupDescription); 
+		}  
 
+		private void AppsLV_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+			var selectedApp = AppsLV.SelectedItem as ApplicationItem;
 
-
+			if (e.AddedItems.Count > 0)
+			{ 
+				AppWindow window = new AppWindow(selectedApp);
+				window.Show();
+			}
+				
+			if (selectedApp != null) 
+				AppsLV.SelectedItem = null; 
 		}
 	}
 }

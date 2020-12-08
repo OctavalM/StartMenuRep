@@ -8,6 +8,7 @@
 	    MinWidth="651"
 	    MinHeight="430"
 	    MaxWidth="651"
+		WindowStartupLocation="CenterScreen"
 	    MaxHeight="680"
 	    mc:Ignorable="d">
 
@@ -16,32 +17,39 @@
 			<Setter Property="Template">
 				<Setter.Value>
 					<ControlTemplate TargetType="{x:Type ListViewItem}">
-						<Button Foreground="White"  
-								 
-								Style="{DynamicResource AppButtonStyle}"
-								 >
-							<StackPanel Orientation="Horizontal">
-								<Border Background="{Binding Color}"
+						<StackPanel x:Name="panel" 
+						            Orientation="Horizontal">
+								<Border Background="{Binding Color}"  
+								        Margin="2"
 										Height="35" 
 										Width="35">
 									<Image Source="{Binding Image}"
-										   Height="23"  
+										   Height="23"    
 										   Width="23"
-										   RenderOptions.BitmapScalingMode="Fant" />
+										   RenderOptions.BitmapScalingMode="Fant"/>
 								</Border>
 
 								<TextBlock Text="{Binding AppName}"
-										   Margin="10,0,0,0"
+										   Margin="10,0,0,0"  
 										   VerticalAlignment="Center"
-										   Foreground="White" />
+										   Foreground="White" 
+										   Width="190"/>
 							</StackPanel>
-						</Button>
-
+						 
+						<ControlTemplate.Triggers>
+							<Trigger Property="IsMouseOver"
+									 Value="True">
+								<Setter TargetName="panel"
+										Property="Background"
+										Value="Gray" />
+							</Trigger>
+						</ControlTemplate.Triggers>
 					</ControlTemplate>
 				</Setter.Value>
 			</Setter>
 		</Style>
 	</Window.Resources>
+
 	<Grid Background="#26373D">
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="45"/>
@@ -57,10 +65,7 @@
 				   Source="/Images/menu.png"/>
 		</Button>
 
-		<DockPanel VerticalAlignment="Bottom">
-			<Border>
-
-			</Border>
+		<DockPanel VerticalAlignment="Bottom"> 
 			<Button DockPanel.Dock="Bottom"  
 				    Style="{StaticResource MenuBarStyle}">
 				<Image Height="18"
@@ -98,22 +103,25 @@
 		</DockPanel>
 
 		<ListView x:Name="AppsLV"
-				  Grid.Column="1"  
-				  Style="{DynamicResource ListViewStyle}"> 
-
+				  Grid.Column="1"   
+				  SelectionChanged="AppsLV_SelectionChanged"
+				  Style="{DynamicResource ListViewStyle}">  
 			<ListView.GroupStyle>
 				<GroupStyle>
 					<GroupStyle.HeaderTemplate>
 						<DataTemplate>
 							<Button Foreground="White"
 									Margin="5,0,0,0"  
-									Padding="3,0,0,0"
-									Style="{DynamicResource AppButtonStyle}"
-									Content="{Binding Name}" />
+									Padding="2,0,0,0" 
+									Style="{DynamicResource AlphabetButtonStyle}"
+									Content="{Binding Name}"/>
 						</DataTemplate>
 					</GroupStyle.HeaderTemplate>
 				</GroupStyle>
 			</ListView.GroupStyle>
 		</ListView>
+
+		<Grid Grid.Column="2">
+		</Grid>
 	</Grid>
 </Window>
